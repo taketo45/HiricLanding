@@ -122,14 +122,12 @@ class Section extends Component {
                     lg={{ size: 8 }}
                     className="text-white text-center"
                   >
-                    <h4 className="home-small-title">Awesome Design</h4>
+                    <h4 className="home-small-title">Awesome Products</h4>
                     <h1 className="home-title">
                       We love make things amazing and simple
                     </h1>
                     <p className="pt-3 home-desc mx-auto">
-                      Maecenas class semper class semper sollicitudin lectus
-                      lorem iaculis imperdiet aliquam vehicula tempor auctor
-                      curabitur pede aenean ornare.
+                      Our products make .
                     </p>
                     <p
                       className="play-shadow mt-4"
