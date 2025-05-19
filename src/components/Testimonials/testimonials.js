@@ -43,7 +43,7 @@ class Testimonials extends Component {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="利用者の声"
+              title="利用者の声(ヒアリング実施前のダミーデータを表示しています)"
               description="Toruneを活用されているイベント主催者の方々から多くの喜びの声をいただいています。イベントの価値を高め、参加者の満足度を向上させる新しい体験を提供しています。"
             />
 

@@ -59,7 +59,7 @@ class Pricing extends Component {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="料金プラン"
+              title="料金プラン(想定)"
               description="イベントの規模や需要に合わせて選べる3つのプランをご用意しました。写真販売による収益化も可能で、イベント主催者様の新たな収入源としてご活用いただけます。"
             />
 

@@ -114,7 +114,7 @@ class Navbar_Page extends Component {
                           color="primary"
                           className=" navbar-btn btn-rounded waves-effect waves-light"
                         >
-                          Try it Free
+                          Torune
                         </Button>
                       </NavItem>
                     </Nav>

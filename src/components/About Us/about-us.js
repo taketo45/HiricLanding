@@ -33,9 +33,10 @@ class AboutUs extends Component {
                     Transform Navi株式会社{" "}
                   </h2>
                   <p className="text-muted pt-4">
-                    Web/アプリをデザイン・開発・運用までトータルでプロデュース。
-                    プロジェクトマネジメント・システム監査、Javascript/Typescript/React/Next.jsをベースにしたWebシステム開発、React NativeをベースにしたiOS、Androidアプリケーション開発、事業企画・システム企画・システム開発・運用までトータルでカバーします。
-                    Toruneを初の商用サービスとしてリリースしました。
+                    Webシステム/アプリをトータルプロデュース。デザイン・実装・運用までトータルでプロデュース。
+                    小規模システムの開発から大規模プロジェクトにおけるプロジェクトマネジメント・システム監査にも対応。
+                    Javascript/Typescript/React/Next.jsをベースにしたWebシステム開発、React NativeをベースにしたiOS、Androidアプリケーション開発の実績多数。
+                    プライバシーに配慮しながら写真の活用が行えるToruneをリリース。
                   </p>
                 </div>
               </Col>

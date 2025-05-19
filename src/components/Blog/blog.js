@@ -31,8 +31,8 @@ class Blog extends Component {
       {
         id: 3,
         image: "assets/images/blog/img-3.jpg",
-        topic: "事例紹介",
-        title: "マラソン大会での活用事例",
+        topic: "事例紹介(想定)",
+        title: "マラソン大会での活用事例(ダミーデータ)",
         description:
           "全国規模のマラソン大会でToruneを導入いただき、参加者の満足度向上と主催者の収益アップにつながった成功事例をご紹介します。",
         link: "",

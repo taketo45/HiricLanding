@@ -73,7 +73,7 @@ class Services extends Component {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="サービス内容"
+              title="プロダクト機能"
               description="Toruneは、イベントでの撮影から写真の活用・共有・販売までを一貫してサポート。参加者のプライバシーに配慮しながら、イベントの最高の瞬間を記録に残し、新たな体験と価値を提供します。"
             />
 
