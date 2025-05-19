@@ -12,25 +12,23 @@ class Features extends Component {
               <Col lg="5" className="order-2 order-lg-1">
                 <div className="features-box mt-5 mt-lg-0">
                   <h3>
-                    A digital web design studio creating modern & engaging
-                    online
+                    イベント撮影を自動化し、プライバシーに配慮した写真活用を実現
                   </h3>
                   <p className="text-muted web-desc">
-                    Separated they live in Bookmarksgrove right at the coast of
-                    the Semantics, a large language ocean.
+                    Toruneは、イベントでの思い出を最大限に活かすための画期的なサービスです。主催者と参加者の双方にとって、安心して写真を共有・活用できる環境を提供します。
                   </p>
                   <ul className="text-muted list-unstyled mt-4 features-item-list">
-                    <li className="">We put a lot of effort in design.</li>
+                    <li className="">参加者の同意に基づく明示的な肖像権管理</li>
                     <li className="">
-                      The most important ingredient of successful website.
+                      AIによる自動写真選定と最適なトリミング処理
                     </li>
-                    <li className="">Submit Your Orgnization.</li>
+                    <li className="">プライバシーに配慮した第三者の映り込み加工</li>
                   </ul>
                   <Link
                     to="#"
                     className="btn btn-primary mt-4 waves-effect waves-light"
                   >
-                    Learn More <i className="mdi mdi-arrow-right"></i>
+                    詳細を見る <i className="mdi mdi-arrow-right"></i>
                   </Link>
                 </div>
               </Col>
@@ -38,7 +36,7 @@ class Features extends Component {
                 <div className="features-img mx-auto me-lg-0">
                   <img
                     src="assets/images/growth-analytics.svg"
-                    alt="macbook"
+                    alt="イベント自動撮影サービス"
                     className="img-fluid"
                   />
                 </div>

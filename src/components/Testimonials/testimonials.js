@@ -13,26 +13,26 @@ class Testimonials extends Component {
       {
         id: 1,
         image: "assets/images/testimonials/user-1.jpg",
-        name: "DENNIS WILLIAMS",
-        cmpName: "Charleston",
+        name: "斉藤 健一",
+        cmpName: "マラソン大会主催者",
         message:
-          "“I feel confident imposing change on myself. It's a lot more fun progressing than looking back. That's why I ultricies enim at malesuada nibh diam on tortor neaded to throw curve balls.”",
+          "「Toruneを導入してから参加者の満足度が大幅に向上しました。ランナー一人ひとりの走っている瞬間を自動で捉え、思い出の動画として販売できるようになり、追加収益にもつながっています。何より参加者からの『最高の思い出になった』という声が嬉しいですね。」",
       },
       {
         id: 2,
         image: "assets/images/testimonials/user-2.jpg",
-        name: "LAURIE BELL",
-        cmpName: "Worcester",
+        name: "田中 美咲",
+        cmpName: "結婚式プランナー",
         message:
-          "“Our task must be to free ourselves by widening our circle of compassion to embrace all living creatures and the whole of quis consectetur nunc sit amet semper justo. nature and its beauty.”",
+          "「ウェディングフォトグラファーとして常に課題だったのが、ゲスト全員の表情を捉えることでした。Toruneのおかげで式場のあらゆる角度から新郎新婦とゲストの自然な瞬間を記録でき、さらに肖像権の管理も自動化されて本当に助かっています。」",
       },
       {
         id: 3,
         image: "assets/images/testimonials/user-3.jpg",
-        name: "HOWARD KELLEY",
-        cmpName: "Lynchburg",
+        name: "山田 拓也",
+        cmpName: "コンサート制作会社",
         message:
-          "“I've learned that people will forget what you said, people will forget what you did, but people will never forget how donec in efficitur lectus, nec lobortis metus you made them feel.”",
+          "「アーティストと観客が一体となった感動の瞬間を、より多くの角度から撮影できるようになりました。SNS共有の設定も簡単で、ファンはプライバシーに配慮された形で思い出を共有できます。何より追加収益としての写真販売が好評で、ビジネス面でも大きなメリットを感じています。」",
       },
     ],
   };
@@ -43,8 +43,8 @@ class Testimonials extends Component {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="What they've said"
-              description="The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli."
+              title="利用者の声"
+              description="Toruneを活用されているイベント主催者の方々から多くの喜びの声をいただいています。イベントの価値を高め、参加者の満足度を向上させる新しい体験を提供しています。"
             />
 
             <Row className="mt-5">

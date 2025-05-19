@@ -11,16 +11,17 @@ class WebsiteDescription extends Component {
           <Container>
             <Row>
               <Col lg="12" className="text-center">
-                <h2 className="text-white">Build your dream website today</h2>
+                <h2 className="text-white">あなたのイベントに新たな価値を</h2>
                 <p className="pt-3 home-desc mx-auto">
-                  But nothing the copy said could convince her and so it didn’t
-                  take long until a few insidious Copy Writers ambushed her.
+                  結婚式、マラソン大会、コンサート、学校行事など、あらゆるイベントで
+                  プライバシーに配慮した自動撮影と写真共有を実現。
+                  思い出の瞬間を最高の形で残すお手伝いをします。
                 </p>
                 <Link
                   to="#"
                   className="btn btn-light mt-5 waves-effect waves-light"
                 >
-                  View Plan & Pricing
+                  料金プランを見る
                 </Link>
               </Col>
             </Row>

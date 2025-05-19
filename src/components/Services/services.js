@@ -11,58 +11,58 @@ class Services extends Component {
   state = {
     services: [
       {
-        title: "Digital Design",
-        icon: "pe-7s-diamond",
+        title: "自動イベント撮影",
+        icon: "pe-7s-camera",
         description:
-          "Some quick example text to build on the card title and make up the bulk of the card's content. Moltin gives platform.",
+          "コンサートやスポーツ観戦を楽しみながら、同時に撮影するのは難しいもの。Toruneなら会場内の自動撮影カメラを活用し、イベントを余すことなく記録します。",
       },
       {
-        title: "Unlimited Colors",
-        icon: "pe-7s-display2",
+        title: "肖像権管理",
+        icon: "pe-7s-id",
         description:
-          "Credibly brand standards compliant users without extensible services. Anibh euismod tincidunt laoreet Ipsum passage.",
+          "参加者登録時に明示的な肖像権利用許諾を確認。プライバシーを尊重した写真共有システムにより、安心して思い出を形に残せます。",
       },
       {
-        title: "Strategy Solutions",
-        icon: "pe-7s-piggy",
+        title: "AI写真処理",
+        icon: "pe-7s-magic-wand",
         description:
-          "Separated they live in Bookmarksgrove right at the coast of the Semantics, and large language ocean neary regelia.",
+          "AIによる顔認識技術を活用し、参加者が映った写真を自動でピックアップ。最適な画角へのトリミングや第三者の映り込みを適切に加工します。",
       },
       {
-        title: "Awesome Support",
-        icon: "pe-7s-science",
+        title: "グループ管理",
+        icon: "pe-7s-users",
         description:
-          "It is a paradisematic country, in which roasted parts of sentences fly into your mouth leave for the far World.",
+          "家族や友人などのグループを登録することで、同じアングルの写真を共有。それぞれにとって最高の一枚との出会いを実現します。",
       },
       {
-        title: "Truly Multipurpose",
-        icon: "pe-7s-news-paper",
+        title: "収益化支援",
+        icon: "pe-7s-cash",
         description:
-          "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.",
+          "イベント主催者は参加者の写真をストアで販売することで収益化が可能。マラソン大会やコンサートなど様々なイベントで新たな収益源を創出します。",
       },
       {
-        title: "Easy to customize",
-        icon: "pe-7s-plane",
+        title: "SNS対応",
+        icon: "pe-7s-share",
         description:
-          "Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.",
+          "SNS投稿用の写真を簡単に取得。投稿NGの方の顔には自動でぼかしが入り、安心して思い出をシェアできます。",
       },
       {
-        title: "Pixel Perfect Design",
-        icon: "pe-7s-arc",
+        title: "スライドショー作成",
+        icon: "pe-7s-display1",
         description:
-          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.",
+          "イベントの終盤では、主役が映っている写真を自動で選定し、感動的なスライドショーをほぼ自動で作成できます。",
       },
       {
-        title: "Perfect Toolbox",
-        icon: "pe-7s-tools",
+        title: "映像編集",
+        icon: "pe-7s-film",
         description:
-          "Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.",
+          "マラソン競技などでは参加者毎にAIが本人映り込みシーンをピックアップし、参加者専用の思い出動画を自動生成します。",
       },
       {
-        title: "Awesome Design",
-        icon: "pe-7s-timer",
+        title: "顔認証受付",
+        icon: "pe-7s-ticket",
         description:
-          "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
+          "事前登録した顔写真を使って当日の受付をスムーズに。出欠管理も効率化され、イベント運営をサポートします。",
       },
     ],
   };
@@ -73,8 +73,8 @@ class Services extends Component {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="Our Services"
-              description="We craft digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning and add a value for our clients."
+              title="サービス内容"
+              description="Toruneは、イベントでの撮影から写真の活用・共有・販売までを一貫してサポート。参加者のプライバシーに配慮しながら、イベントの最高の瞬間を記録に残し、新たな体験と価値を提供します。"
             />
 
             <Row className="mt-5">
