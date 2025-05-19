@@ -39,15 +39,23 @@ module.exports = async (req, res) => {
       return res.status(400).json({ error: '必要な情報が不足しています' });
     }
 
+    // デバッグ情報をログに出力
+    console.log('SMTP設定:', {
+      host: process.env.EMAIL_HOST || process.env.SMTP_HOST || 'transformnavi.sakura.ne.jp',
+      port: parseInt(process.env.EMAIL_PORT || process.env.SMTP_PORT || '465'),
+      secure: true,
+      user: process.env.EMAIL_USER || process.env.SMTP_USER || 'form_submit@transformnavi.jp',
+    });
+
     // トランスポーターの作成
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: false,
+      host: process.env.EMAIL_HOST || process.env.SMTP_HOST || 'transformnavi.sakura.ne.jp',
+      port: parseInt(process.env.EMAIL_PORT || process.env.SMTP_PORT || '465'),
+      secure: true, // port 465では通常secure: trueが必要
       debug: true,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: process.env.EMAIL_USER || process.env.SMTP_USER || 'form_submit@transformnavi.jp',
+        pass: process.env.EMAIL_PASS || process.env.SMTP_PASS,
       },
     });
 
@@ -76,13 +84,26 @@ CSRF Token: ${csrf_token}
 `,
     };
 
-    // メール送信
-    await transporter.sendMail(mailOptions);
-
-    // 成功レスポンス
-    return res.status(200).json({ message: '送信が完了しました' });
+    // メール送信のテスト
+    console.log('メール送信開始...');
+    
+    try {
+      const info = await transporter.sendMail(mailOptions);
+      console.log('メール送信成功:', info);
+      
+      // 成功レスポンス
+      return res.status(200).json({ message: '送信が完了しました', messageId: info.messageId });
+    } catch (sendError) {
+      console.error('メール送信中の詳細エラー:', sendError);
+      throw new Error(`メール送信失敗: ${sendError.message}`);
+    }
   } catch (error) {
     console.error('メール送信エラー:', error);
-    return res.status(500).json({ error: 'メール送信に失敗しました' });
+    // エラーの詳細情報をレスポンスに含める
+    return res.status(500).json({ 
+      error: 'メール送信に失敗しました', 
+      message: error.message,
+      code: error.code || 'UNKNOWN'
+    });
   }
 };
