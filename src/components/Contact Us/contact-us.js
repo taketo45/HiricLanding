@@ -19,9 +19,9 @@ const ContactUs = () => {
         subject: '',
     },
     validationSchema: Yup.object({
-        name: Yup.string().required("Please Enter Your Name"),
-        email: Yup.string().required("Please Enter Your Email"),
-        subject: Yup.string().required("Please Enter Your Subject"),
+        name: Yup.string().required("お名前を入力してください"),
+        email: Yup.string().required("メールアドレスを入力してください"),
+        subject: Yup.string().required("件名を入力してください"),
     }),
     onSubmit: (values) => {
         console.log("values",values);
@@ -33,33 +33,33 @@ const ContactUs = () => {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="Get In Touch"
-              description="We thrive when coming up with innovative ideas but also understand that a smart concept should be supported with faucibus sapien odio measurable results."
+              title="お問い合わせ"
+              description="Toruneの導入に関するご質問や、イベントへの活用方法についてのご相談など、お気軽にお問い合わせください。専門スタッフが丁寧にサポートいたします。"
             />
 
             <Row>
               <Col lg="4">
                 <div className="mt-4 pt-4">
                   <p className="mt-4">
-                    <span className="h5">Office Address 1:</span>
+                    <span className="h5">所在地:</span>
                     <br />{" "}
                     <span className="text-muted d-block mt-2">
-                      4461 Cedar Street Moro, AR 72368
+                      〒150-0043<br />東京都渋谷区道玄坂1-12-1<br />渋谷マークシティW22階
                     </span>
                   </p>
                   <p className="mt-4">
-                    <span className="h5">Office Address 2:</span>
+                    <span className="h5">お問い合わせ先:</span>
                     <br />{" "}
                     <span className="text-muted d-block mt-2">
-                      2467 Swick Hill Street <br />
-                      New Orleans, LA 70171
+                      Email: contact@torune.jp<br />
+                      Tel: 03-XXXX-XXXX
                     </span>
                   </p>
                   <p className="mt-4">
-                    <span className="h5">Working Hours:</span>
+                    <span className="h5">営業時間:</span>
                     <br />{" "}
                     <span className="text-muted d-block mt-2">
-                      9:00AM To 6:00PM
+                      平日 9:00〜18:00
                     </span>
                   </p>
                 </div>
@@ -79,7 +79,7 @@ const ContactUs = () => {
                       <Input
                           name="name"
                           className=""
-                          placeholder="Your name*"
+                          placeholder="お名前 *"
                           type="text"
                           onChange={validation.handleChange}
                           onBlur={validation.handleBlur}
@@ -96,7 +96,7 @@ const ContactUs = () => {
                       <Input
                             name="email"
                             className=""
-                            placeholder="Your email*"
+                            placeholder="メールアドレス *"
                             type="email"
                             onChange={validation.handleChange}
                             onBlur={validation.handleBlur}
@@ -115,7 +115,7 @@ const ContactUs = () => {
                       <Input
                             name="subject"
                             className=""
-                            placeholder="Your Subject.."
+                            placeholder="件名"
                             type="text"
                             onChange={validation.handleChange}
                             onBlur={validation.handleBlur}
@@ -137,7 +137,7 @@ const ContactUs = () => {
                             id="comments"
                             rows="4"
                             className="form-control"
-                            placeholder="Your message..."
+                            placeholder="お問い合わせ内容"
                           ></textarea>
                         </div>
                       </Col>
@@ -145,7 +145,7 @@ const ContactUs = () => {
                     <Row>
                       <Col lg="12" className="text-end">
                         <Button className="submitBnt btn btn-primary">
-                          Send Message
+                          送信する
                         </Button>
                         <div id="simple-msg"></div>
                       </Col>
