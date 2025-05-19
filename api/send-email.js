@@ -62,7 +62,7 @@ module.exports = async (req, res) => {
     // メールの内容
     const mailOptions = {
       from: process.env.EMAIL_FROM || 'form_submit@transformnavi.jp',
-      to: process.env.EMAIL_TO || 'contact@transformnavi.jp',
+      to: process.env.EMAIL_TO || 'contact@transformnavi.jp', // 正しいアドレス：contact@transformnavi.jp
       subject: `お問い合わせ: ${subject || '件名なし'}`,
       text: `
 名前: ${name}
