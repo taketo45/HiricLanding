@@ -16,8 +16,8 @@ class Footer extends Component {
           icon: "mdi mdi-navigation-variant",
           links: [
             { linkTitle: "ホーム", link: "#home" },
-            { linkTitle: "会社情報", link: "#about" },
-            { linkTitle: "採用情報", link: "#" },
+            { linkTitle: "会社情報", link: "#features" },
+            { linkTitle: "わたしたち", link: "#about" },
             { linkTitle: "お問い合わせ", link: "#contact" },
           ],
         },
@@ -33,9 +33,8 @@ class Footer extends Component {
         {
           title: "サポート",
           links: [
-            { linkTitle: "よくある質問", link: "#blog" },
+            { linkTitle: "ニュース", link: "#blog" },
             { linkTitle: "お問い合わせ", link: "#contact" },
-            { linkTitle: "ヘルプセンター", link: "#" },
           ],
         },
       ],
@@ -77,11 +76,19 @@ class Footer extends Component {
                     </Link>
                     :
                   <h4>{item.title}</h4>}
-                  <div className="text-muted mt-4">
-                    <ul className="list-unstyled footer-list">
+                  <div className="text-muted mt-4">                    <ul className="list-unstyled footer-list">
                       {item.links.map((link, key) => (
                         <li key={key}>
-                          <Link to={link.link}>{link.linkTitle}</Link>
+                          <a href={link.link} onClick={(e) => {
+                            if (link.link.startsWith('#')) {
+                              e.preventDefault();
+                              const targetId = link.link.substring(1);
+                              const element = document.getElementById(targetId);
+                              if (element) {
+                                element.scrollIntoView({ behavior: 'smooth' });
+                              }
+                            }
+                          }}>{link.linkTitle}</a>
                         </li>
                       ))}
                     </ul>
