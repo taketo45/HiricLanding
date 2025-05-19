@@ -48,20 +48,24 @@ const ContactUs = () => {
           .max(1000, "お問い合わせ内容は1000文字以内で入力してください")
           .required("お問い合わせ内容を入力してください"),
     }),    onSubmit: (values, { resetForm }) => {
-        // フォームデータの作成
-        const formData = new FormData();
-        formData.append('name', values.name);
-        formData.append('email', values.email);
-        formData.append('subject', values.subject);
-        formData.append('message', values.message);
-        formData.append('csrf_token', csrfToken);
+        // 送信中状態にする
+        setSubmitStatus('sending');
+        
+        // 送信データの準備
+        const formData = {
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+          csrf_token: csrfToken,
+        };
         
         // 本番環境かローカル環境かを判定
-        const isDevelopment = window.location.hostname === 'localhost:3000' || window.location.hostname === '127.0.0.1';
+        const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
         
         if (isDevelopment) {
           // 開発環境では成功をシミュレーション
-          console.log('開発モード: 送信データ', Object.fromEntries(formData));
+          console.log('開発モード: 送信データ', formData);
           
           // 成功レスポンスをモック（実際の送信は行わない）
           setTimeout(() => {
@@ -69,21 +73,24 @@ const ContactUs = () => {
             resetForm();
           }, 800); // 少し遅延を入れてAPI呼び出しをシミュレート
         } else {
-          // 本番環境ではPHPスクリプトにPOSTリクエストを送信
-          fetch('https://transformnavi.jp/requestform.php', {
+          // Vercel Functions APIエンドポイントにリクエストを送信
+          fetch('/api/send-email', {
             method: 'POST',
-            body: formData,
-            // CORSエラーを回避するためのヘッダー（サーバー側でも設定が必要）
-            mode: 'cors',
-            credentials: 'same-origin',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
           })
           .then(response => {
             if (response.ok) {
-              setSubmitStatus('success');
-              resetForm();
+              return response.json();
             } else {
-              setSubmitStatus('error');
+              throw new Error('サーバーエラー');
             }
+          })
+          .then(data => {
+            setSubmitStatus('success');
+            resetForm();
           })
           .catch(error => {
             console.error('送信エラー:', error);
@@ -129,6 +136,11 @@ const ContactUs = () => {
               </Col>
               <Col lg="8">
                 <div className="custom-form mt-4 pt-4">
+                {submitStatus === 'sending' && (
+                  <div className="alert alert-info">
+                    送信中です。しばらくお待ちください...
+                  </div>
+                )}
                 {submitStatus === 'success' && (
                   <div className="alert alert-success">
                     お問い合わせありがとうございます。内容を確認次第、ご連絡いたします。
@@ -219,10 +231,13 @@ const ContactUs = () => {
                         </div>
                       </Col>
                     </Row>
-                    <Row>
-                      <Col lg="12" className="text-end">
-                        <Button type="submit" className="submitBnt btn btn-primary">
-                          送信する
+                    <Row>                      <Col lg="12" className="text-end">
+                        <Button 
+                          type="submit" 
+                          className="submitBnt btn btn-primary"
+                          disabled={submitStatus === 'sending'}
+                        >
+                          {submitStatus === 'sending' ? '送信中...' : '送信する'}
                         </Button>
                       </Col>
                     </Row>
