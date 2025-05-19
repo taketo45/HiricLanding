@@ -7,9 +7,6 @@ class FooterLinks extends Component {
     socials: [
       { icon: "mdi mdi-facebook", link: "#" },
       { icon: "mdi mdi-twitter", link: "#" },
-      { icon: "mdi mdi-linkedin", link: "#" },
-      { icon: "mdi mdi-google-plus", link: "#" },
-      { icon: "mdi mdi-microsoft-xbox", link: "#" },
     ],
   };
   render() {
@@ -21,7 +18,7 @@ class FooterLinks extends Component {
               <Col lg="12">
                 <div className="float-sm-start pull-none">
                   <p className="copy-rights  mb-3 mb-sm-0">
-                    2023 © Hiric - Themesbrand
+                    2025 © Transform Navi
                   </p>
                 </div>
                 <div className="float-sm-end pull-none copyright ">

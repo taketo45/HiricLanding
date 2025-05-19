@@ -11,8 +11,8 @@ class Footer extends Component {
     this.state = {
       footerItems: [
         {
-          title: "HIRIC",
-          icon: "mdi mdi-alien",
+          title: "Transform Navi",
+          icon: "mdi mdi-navigation-variant",
           links: [
             { linkTitle: "Home", link: "#" },
             { linkTitle: "About us", link: "#" },

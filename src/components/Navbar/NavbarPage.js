@@ -74,7 +74,7 @@ class Navbar_Page extends Component {
             >
               <Container>
                 <NavbarBrand className="logo text-uppercase" href="/">
-                  <i className="mdi mdi-alien"></i>Hiric
+                  <i className="mdi mdi-navigation-variant"></i>Transform Navi
                 </NavbarBrand>
 
                 <NavbarToggler className="" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" onClick={this.toggle}>
