@@ -37,7 +37,7 @@ class Section extends Component {
     return (
       <React.Fragment>
         <section className="section bg-home vh-100 active" id="home">
-          <div   className="bg-overlay">
+          <div className="bg-overlay">
               <Particles
              
                 id="tsparticles"
@@ -122,12 +122,12 @@ class Section extends Component {
                     lg={{ size: 8 }}
                     className="text-white text-center"
                   >
-                    <h4 className="home-small-title">Awesome Products</h4>
+                    <h4 className="home-small-title">Transform Navi株式会社</h4>
                     <h1 className="home-title">
-                      We love make things amazing and simple
+                      イベントを自動で撮影<br />プライバシーに配慮し活用・共有・販売
                     </h1>
                     <p className="pt-3 home-desc mx-auto">
-                      Our products make .
+                      Toruneは、イベントの最高の瞬間を安心して記録に残せるサービスです。
                     </p>
                     <p
                       className="play-shadow mt-4"

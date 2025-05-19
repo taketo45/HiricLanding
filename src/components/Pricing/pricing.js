@@ -12,42 +12,42 @@ class Pricing extends Component {
     pricings: [
       {
         id: 1,
-        title: "Economy",
-        price: "9.90",
-        duration: "MONTH",
+        title: "スタンダード",
+        price: "29,800",
+        duration: "イベント",
         features: {
-          bandwith: "1GB",
-          onlinespace: "50MB",
-          support: "No",
-          domain: "1",
-          hiddenFees: "No",
+          bandwith: "100名まで",
+          onlinespace: "写真100枚",
+          support: "メールサポート",
+          domain: "7日間",
+          hiddenFees: "追加料金なし",
         },
       },
       {
         id: 2,
-        title: "DELUXE",
-        price: "19.90",
-        duration: "MONTH",
+        title: "プロフェッショナル",
+        price: "49,800",
+        duration: "イベント",
         isRibbon: true,
         features: {
-          bandwith: "10GB",
-          onlinespace: "500MB",
-          support: "Yes",
-          domain: "10",
-          hiddenFees: "No",
+          bandwith: "300名まで",
+          onlinespace: "写真500枚",
+          support: "優先サポート",
+          domain: "30日間",
+          hiddenFees: "追加料金なし",
         },
       },
       {
         id: 3,
-        title: "ULTIMATE",
-        price: "29.90",
-        duration: "MONTH",
+        title: "エンタープライズ",
+        price: "98,000",
+        duration: "イベント",
         features: {
-          bandwith: "100GB",
-          onlinespace: "2 GB",
-          support: "Yes",
-          domain: "Unlimited",
-          hiddenFees: "No",
+          bandwith: "無制限",
+          onlinespace: "写真無制限",
+          support: "24時間サポート",
+          domain: "60日間",
+          hiddenFees: "追加料金なし",
         },
       },
     ],
@@ -59,8 +59,8 @@ class Pricing extends Component {
           <Container>
             {/* Render section title */}
             <SectionTitle
-              title="Our Pricing"
-              description="Call to action pricing table is really crucial to your for your business website. Make your bids stand-out with amazing options."
+              title="料金プラン"
+              description="イベントの規模や需要に合わせて選べる3つのプランをご用意しました。写真販売による収益化も可能で、イベント主催者様の新たな収入源としてご活用いただけます。"
             />
 
             <Row className="mt-5">
