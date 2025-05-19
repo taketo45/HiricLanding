@@ -191,13 +191,12 @@ class Footer extends Component {
           <Link to="#" id="mode" className="mode-btn text-white" onClick={this.toggleThem}>
                 <i className="mdi mdi-weather-sunny bx-spin mode-light"></i>
                 <i className="mdi mdi-moon-waning-crescent mode-dark"></i>
-            </Link>
-            <Link
+            </Link>            <Link
               to="#"
               onClick={this.toggleSwitcher}
               className="settings rounded-right"
             >
-              <i className="mdi mdi-cog  mdi-spin"></i>
+              <i className="mdi mdi-cog"></i>
             </Link>
           </div>
         </div>
