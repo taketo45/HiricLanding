@@ -56,23 +56,40 @@ const ContactUs = () => {
         formData.append('message', values.message);
         formData.append('csrf_token', csrfToken);
         
-        // PHPスクリプトにPOSTリクエストを送信
-        fetch('https://transformnavi.jp/requestform.php', {
-          method: 'POST',
-          body: formData,
-        })
-        .then(response => {
-          if (response.ok) {
+        // 本番環境かローカル環境かを判定
+        const isDevelopment = window.location.hostname === 'localhost:3000' || window.location.hostname === '127.0.0.1';
+        
+        if (isDevelopment) {
+          // 開発環境では成功をシミュレーション
+          console.log('開発モード: 送信データ', Object.fromEntries(formData));
+          
+          // 成功レスポンスをモック（実際の送信は行わない）
+          setTimeout(() => {
             setSubmitStatus('success');
             resetForm();
-          } else {
+          }, 800); // 少し遅延を入れてAPI呼び出しをシミュレート
+        } else {
+          // 本番環境ではPHPスクリプトにPOSTリクエストを送信
+          fetch('https://transformnavi.jp/requestform.php', {
+            method: 'POST',
+            body: formData,
+            // CORSエラーを回避するためのヘッダー（サーバー側でも設定が必要）
+            mode: 'cors',
+            credentials: 'same-origin',
+          })
+          .then(response => {
+            if (response.ok) {
+              setSubmitStatus('success');
+              resetForm();
+            } else {
+              setSubmitStatus('error');
+            }
+          })
+          .catch(error => {
+            console.error('送信エラー:', error);
             setSubmitStatus('error');
-          }
-        })
-        .catch(error => {
-          console.error('送信エラー:', error);
-          setSubmitStatus('error');
-        });
+          });
+        }
     }
 });
     return (
@@ -111,7 +128,8 @@ const ContactUs = () => {
                 </div>
               </Col>
               <Col lg="8">
-                <div className="custom-form mt-4 pt-4">                {submitStatus === 'success' && (
+                <div className="custom-form mt-4 pt-4">
+                {submitStatus === 'success' && (
                   <div className="alert alert-success">
                     お問い合わせありがとうございます。内容を確認次第、ご連絡いたします。
                   </div>
@@ -181,28 +199,27 @@ const ContactUs = () => {
                             <FormFeedback type="invalid">{validation.errors.subject}</FormFeedback>
                         ) : null}
                       </Col>
-                    </Row>                    <Row>
+                    </Row>
+                    <Row>
                       <Col lg="12 mt-2">
                         <div className="form-group">
                           <textarea
                             name="message"
                             id="message"
                             rows="4"
-                            className="form-control"
+                            className={`form-control ${validation.touched.message && validation.errors.message ? 'is-invalid' : ''}`}
                             placeholder="お問い合わせ内容 *"
                             onChange={validation.handleChange}
                             onBlur={validation.handleBlur}
                             value={validation.values.message || ""}
-                            invalid={
-                              validation.touched.message && validation.errors.message ? true : false
-                            }
                           ></textarea>
                           {validation.touched.message && validation.errors.message ? (
                             <div className="text-danger">{validation.errors.message}</div>
                           ) : null}
                         </div>
                       </Col>
-                    </Row>                    <Row>
+                    </Row>
+                    <Row>
                       <Col lg="12" className="text-end">
                         <Button type="submit" className="submitBnt btn btn-primary">
                           送信する
