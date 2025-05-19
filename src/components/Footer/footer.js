@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Form, Input } from "reactstrap";
@@ -14,27 +15,27 @@ class Footer extends Component {
           title: "Transform Navi",
           icon: "mdi mdi-navigation-variant",
           links: [
-            { linkTitle: "Home", link: "#" },
-            { linkTitle: "About us", link: "#" },
-            { linkTitle: "Careers", link: "#" },
-            { linkTitle: "Contact us", link: "#" },
+            { linkTitle: "ホーム", link: "#home" },
+            { linkTitle: "会社情報", link: "#about" },
+            { linkTitle: "採用情報", link: "#" },
+            { linkTitle: "お問い合わせ", link: "#contact" },
           ],
         },
         {
-          title: "Information",
+          title: "サービス情報",
           links: [
-            { linkTitle: "Terms & Condition", link: "#" },
-            { linkTitle: "About us", link: "#" },
-            { linkTitle: "Jobs", link: "#" },
-            { linkTitle: "Bookmarks", link: "#" },
+            { linkTitle: "サービス", link: "#services" },
+            { linkTitle: "利用規約", link: "#" },
+            { linkTitle: "料金プラン", link: "#pricing" },
+            { linkTitle: "導入事例", link: "#testimonial" },
           ],
         },
         {
-          title: "Support",
+          title: "サポート",
           links: [
-            { linkTitle: "FAQ", link: "#" },
-            { linkTitle: "Contact", link: "#" },
-            { linkTitle: "Disscusion", link: "#" },
+            { linkTitle: "よくある質問", link: "#blog" },
+            { linkTitle: "お問い合わせ", link: "#contact" },
+            { linkTitle: "ヘルプセンター", link: "#" },
           ],
         },
       ],
@@ -89,17 +90,15 @@ class Footer extends Component {
               ))}
 
               <Col lg="3" className="mt-4">
-                <h4>Subscribe</h4>
+                <h4>ニュースレター登録</h4>
                 <div className="text-muted mt-4">
                   <p>
-                    In an ideal world this text wouldn’t exist, a client would
-                    acknowledge the importance of having web copy before the
-                    design starts.
+                    Toruneの最新情報やイベント撮影に関するヒント、プライバシー配慮型写真共有の最新トレンドなどをお届けします。定期的な情報をご希望の方はぜひご登録ください。
                   </p>
                 </div>
                 <Form className="form subscribe">
                   <Input
-                    placeholder="Email"
+                    placeholder="メールアドレス"
                     className="form-control"
                     required
                   />
@@ -121,7 +120,7 @@ class Footer extends Component {
           style={{ left: this.state.isSwitchToggle ? "0px" : "-189px" }}
         >
           <div>
-            <h3>Select your color</h3>
+            <h3>カラーを選択</h3>
             <ul className="pattern">
               <li>
                 <Link

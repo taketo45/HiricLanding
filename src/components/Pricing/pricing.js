@@ -12,11 +12,11 @@ class Pricing extends Component {
     pricings: [
       {
         id: 1,
-        title: "スタンダード",
-        price: "29,800",
+        title: "フリー",
+        price: "0",
         duration: "イベント",
         features: {
-          bandwith: "100名まで",
+          bandwith: "10名まで",
           onlinespace: "写真100枚",
           support: "メールサポート",
           domain: "7日間",
@@ -25,12 +25,12 @@ class Pricing extends Component {
       },
       {
         id: 2,
-        title: "プロフェッショナル",
-        price: "49,800",
+        title: "プロ",
+        price: "3,000",
         duration: "イベント",
         isRibbon: true,
         features: {
-          bandwith: "300名まで",
+          bandwith: "100名まで",
           onlinespace: "写真500枚",
           support: "優先サポート",
           domain: "30日間",
@@ -39,15 +39,15 @@ class Pricing extends Component {
       },
       {
         id: 3,
-        title: "エンタープライズ",
-        price: "98,000",
+        title: "イベンター",
+        price: "10,000",
         duration: "イベント",
         features: {
-          bandwith: "無制限",
-          onlinespace: "写真無制限",
+          bandwith: "500名",
+          onlinespace: "写真2500枚",
           support: "24時間サポート",
           domain: "60日間",
-          hiddenFees: "追加料金なし",
+          hiddenFees: "基本料金を超える場合、200名・1000枚単位でに1000円追加",
         },
       },
     ],

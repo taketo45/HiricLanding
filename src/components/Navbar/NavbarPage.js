@@ -89,7 +89,7 @@ class Navbar_Page extends Component {
                   <ScrollspyNav
                     scrollTargetIds={TargetId}
                     activeNavClass="active"
-                    scrollDuration="800"
+                    scrollDuration="200"
                     headerBackground="true"
                   >
                     <Nav className="navbar-nav navbar-center" id="mySidenav">

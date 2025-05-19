@@ -14,47 +14,47 @@ class PricingBox extends Component {
               </div>
             ) : null}
             <h4 className="text-uppercase">{this.props.pricing.title}</h4>
-            <h1>${this.props.pricing.price}</h1>
+            <h1>{this.props.pricing.price}円</h1>
             <h6 className="text-uppercase text-muted">
               Billing Per {this.props.pricing.duration}
             </h6>
             <div className="plan-features mt-5">
               <p>
-                Bandwidth:{" "}
+                アカウント数:{" "}
                 <b className="text-primary">
                   {this.props.pricing.features.bandwith}
                 </b>
               </p>
               <p>
-                Onlinespace:{" "}
+                ストレージ:{" "}
                 <b className="text-primary">
                   {this.props.pricing.features.onlinespace}
                 </b>
               </p>
               <p>
-                Support:{" "}
+                サポート:{" "}
                 <b className="text-primary">
                   {this.props.pricing.features.support}
                 </b>
               </p>
               <p>
+                利用期間：{" "}
                 <b className="text-primary">
                   {this.props.pricing.features.domain}
-                </b>{" "}
-                Domain
+                </b>
               </p>
               <p>
+                追加料金：{" "}
                 <b className="text-primary">
                   {this.props.pricing.features.hiddenFees}
-                </b>{" "}
-                Hidden Fees
+                </b>
               </p>
             </div>
             <Link
               to="#"
               className="btn btn-primary waves-effect waves-light mt-5"
             >
-              Join Now
+              購入
             </Link>
           </div>
         </Col>

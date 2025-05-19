@@ -48,20 +48,20 @@ class Index9 extends Component {
                 {/* Importing Website Description */}
                 <WebsiteDescription/>
 
-                {/* Importing About Us */}
-                <AboutUs/>
+                {/* Importing Testimonials */}
+                <Testimonials/>
 
                 {/* Importing Pricing */}
                 <Pricing/>
-
-                {/* Importing Testimonials */}
-                <Testimonials/>
 
                 {/* Importing Get Started */}
                 <GetStarted/>
 
                 {/* Importing Blog */}
                 <Blog/>
+
+                {/* Importing About Us */}
+                <AboutUs/>
 
                 {/* Importing Contact Us */}
                 <ContactUs/>
