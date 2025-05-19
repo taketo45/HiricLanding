@@ -42,8 +42,8 @@ module.exports = async (req, res) => {
     // トランスポーターの作成
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: process.env.SMTP_PORT === '465',
+      port: parseInt(process.env.SMTP_PORT || '465'),
+      secure: true,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -52,7 +52,7 @@ module.exports = async (req, res) => {
 
     // メールの内容
     const mailOptions = {
-      from: process.env.EMAIL_FROM || 'noreply@transformnavi.jp',
+      from: process.env.EMAIL_FROM || 'form_submit@transformnavi.jp',
       to: process.env.EMAIL_TO || 'contact@transformnavi.jp',
       subject: `お問い合わせ: ${subject || '件名なし'}`,
       text: `
