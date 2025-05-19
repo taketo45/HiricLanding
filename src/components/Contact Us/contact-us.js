@@ -34,7 +34,7 @@ const ContactUs = () => {
             {/* Render section title */}
             <SectionTitle
               title="お問い合わせ"
-              description="Toruneの導入に関するご質問や、イベントへの活用方法についてのご相談など、お気軽にお問い合わせください。専門スタッフが丁寧にサポートいたします。"
+              description="Toruneの導入に関するご質問や、イベントへの活用方法についてのご相談など、お気軽にお問い合わせください。"
             />
 
             <Row>
@@ -44,22 +44,21 @@ const ContactUs = () => {
                     <span className="h5">所在地:</span>
                     <br />{" "}
                     <span className="text-muted d-block mt-2">
-                      〒150-0043<br />東京都渋谷区道玄坂1-12-1<br />渋谷マークシティW22階
+                      〒150-0002<br />東京都渋谷区渋谷2-19-15<br />宮益坂ビルディング609
                     </span>
                   </p>
                   <p className="mt-4">
                     <span className="h5">お問い合わせ先:</span>
                     <br />{" "}
                     <span className="text-muted d-block mt-2">
-                      Email: contact@torune.jp<br />
-                      Tel: 03-XXXX-XXXX
+                      Email: contact@transformnavi.jp<br />
                     </span>
                   </p>
                   <p className="mt-4">
                     <span className="h5">営業時間:</span>
                     <br />{" "}
                     <span className="text-muted d-block mt-2">
-                      平日 9:00〜18:00
+                      平日 10:00〜18:00
                     </span>
                   </p>
                 </div>

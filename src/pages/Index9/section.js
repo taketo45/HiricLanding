@@ -122,7 +122,7 @@ class Section extends Component {
                     lg={{ size: 8 }}
                     className="text-white text-center"
                   >
-                    <h4 className="home-small-title">Transform Navi株式会社</h4>
+                    <h4 className="home-small-title">Torune</h4>
                     <h1 className="home-title">
                       イベントを自動で撮影<br />プライバシーに配慮し活用・共有・販売
                     </h1>
