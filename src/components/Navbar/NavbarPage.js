@@ -23,10 +23,10 @@ class Navbar_Page extends Component {
         { id: 1, idnm: "home", navheading: "Home" },
         { id: 2, idnm: "features", navheading: "Features" },
         { id: 3, idnm: "services", navheading: "Services" },
-        { id: 3, idnm: "about", navheading: "About" },
         { id: 4, idnm: "pricing", navheading: "Pricing" },
         { id: 5, idnm: "blog", navheading: "Blog" },
-        { id: 6, idnm: "contact", navheading: "Contact" },
+        { id: 6, idnm: "about", navheading: "About" },
+        { id: 7, idnm: "contact", navheading: "Contact" },
       ],
       isOpenMenu: false,
     };
