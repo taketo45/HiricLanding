@@ -10,7 +10,7 @@ class AboutUs extends Component {
       {
         id: 1,
         name: "生貝 武俊(Ikegai Taketoshi)",
-        image: "assets/images/team/ceoFace.jpg",
+        image: "assets/images/team/comming.png",
         post: "代表, 開発(Representative, Developer)",
       },
       {
