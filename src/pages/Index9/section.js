@@ -37,8 +37,7 @@ class Section extends Component {
     return (
       <React.Fragment>
         <section className="section bg-home vh-100 active" id="home">
-          <div className="bg-overlay">
-              <Particles
+          <div className="bg-overlay">              <Particles
              
                 id="tsparticles"
                 init={particlesInit}
@@ -47,7 +46,8 @@ class Section extends Component {
                   style:{
                     position:"absolute"
                   },
-                  fpsLimit: 120,
+                  // フレームレートの制限（低めに設定すると処理負荷が減り、動きも安定する）
+                  fpsLimit: 60,
                   interactivity: {
                     events: {
                       onClick: {
@@ -66,7 +66,8 @@ class Section extends Component {
                       },
                       repulse: {
                         distance: 100,
-                        duration: 9,
+                        // ホバー時の反発効果の持続時間（短くすると加速が抑えられる）
+                        duration: 0.4,
                       },
                     },
                   },
@@ -87,31 +88,53 @@ class Section extends Component {
                     move: {
                       direction: "none",
                       enable: true,
+                      // 画面端での挙動（out:画面外へ出て反対側から再登場）
                       outModes: {
-                        default: "bounce",
+                        default: "out",
                       },
                       random: false,
-                      speed: 2,
+                      // 動く速度（小さくすると遅くなる）
+                      speed: 0.8,
                       straight: false,
+                      // 速度の減衰（0で一定速度を維持）
+                      decay: 0,
+                      // 重力効果を無効化
+                      gravity: {
+                        enable: false
+                      }
                     },
                     number: {
                       density: {
                         enable: true,
                         area: 900,
                       },
-                      value: 100,
+                      value: 80,
+                      // パーティクル数の上限
+                      limit: 100
                     },
                     opacity: {
                       value: 0.4,
+                      // 透明度アニメーションを無効化
+                      animation: {
+                        enable: false
+                      }
                     },
                     shape: {
                       type: "circle",
                     },
                     size: {
                       value: { min: 1, max: 5 },
+                      // サイズアニメーションを無効化
+                      animation: {
+                        enable: false
+                      }
                     },
                   },
                   detectRetina: true,
+                  // フルスクリーンモードを無効化（指定領域内でのみ描画）
+                  fullScreen: {
+                    enable: false
+                  },
                 }}
               />
             </div>
