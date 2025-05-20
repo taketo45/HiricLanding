@@ -199,6 +199,14 @@ h6 {
   font-size: 12px;
 }
 
+/* ナビゲーションバーのロゴスタイル */
+.navbar-logo-img {
+  max-height: 30px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 b {
   font-weight: 500;
 }

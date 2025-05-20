@@ -72,8 +72,13 @@ class Navbar_Page extends Component {
               }
               id="navbar"
             >
-              <Container>
-                <NavbarBrand className="logo text-uppercase" href="/">
+              <Container>                <NavbarBrand className="logo text-uppercase" href="/">
+                  <img
+                    alt=""
+                    src="assets/companylogo.png"
+                    className="navbar-logo-img"
+                    style={{ height: '30px', marginRight: '10px', verticalAlign: 'middle' }}
+                  />
                   <i className="mdi mdi-navigation-variant"></i>Transform Navi
                 </NavbarBrand>
 

@@ -1,0 +1,8 @@
+/* カスタムスタイル設定 */
+.navbar-logo-img {
+  max-height: 30px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
